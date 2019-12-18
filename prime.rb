@@ -1,9 +1,12 @@
-# Add  code here!
 
+def prime?(contender)
+  
+  return false if contender < 2
+  array = (2..contender).to_a - [contender]
 
+  array.each do |num|
+    return false if contender % num == 0
+  end
 
-def prime?(value)
-  return false if value < 2
-(2...value).each { |n| return false if value % n = 0}
-true 
+  return true 
 end
